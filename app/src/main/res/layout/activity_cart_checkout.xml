@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:fillViewport="true"
+    tools:context=".CartCheckoutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnBackCart"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="← Back"
+                android:textColor="@color/primary_red"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cart &amp; Checkout"
+                android:textColor="@color/primary_red"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <!-- Cart Items Container -->
+        <LinearLayout
+            android:id="@+id/containerCartItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total: $0.00"
+            android:textColor="@color/primary_red"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Additional Free Items Section (4 Checkboxes) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Additional Requests (Free):"
+            android:textColor="@color/text_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <CheckBox
+                android:id="@+id/cbUtensils"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Utensils"
+                android:textColor="@color/text_dark"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/cbNapkins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Napkins"
+                android:textColor="@color/text_dark"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/cbKetchup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ketchup"
+                android:textColor="@color/text_dark"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/cbExtraBag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Extra plastic bag"
+                android:textColor="@color/text_dark"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- Ordering Preferences Section (Min 4 Radio Buttons) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Ordering Preference:"
+            android:textColor="@color/text_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rgOrderPreferences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp">
+
+            <RadioButton
+                android:id="@+id/rbDineIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Dine-In"
+                android:textColor="@color/text_dark"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rbTakeout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Takeout"
+                android:textColor="@color/text_dark"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rbDriveThru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drive-Thru"
+                android:textColor="@color/text_dark"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rbCurbside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Curbside Pickup"
+                android:textColor="@color/text_dark"
+                android:textSize="15sp" />
+
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlaceOrder"
+            style="@style/RestaurantButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Place Order" />
+
+    </LinearLayout>
+</ScrollView>
